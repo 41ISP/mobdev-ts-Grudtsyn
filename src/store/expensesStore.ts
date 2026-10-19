@@ -1,5 +1,8 @@
-const useExpensesStore = () => {
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
-}
+export const useExpensesStore = create()(
+    persist((set) => ({
 
-export default useExpensesStore
+    }), {name: 'expanses'})
+)
